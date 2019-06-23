@@ -12,12 +12,12 @@ namespace Regular_expression
         public static (int, int) Count_Numbers(string str)
         {
             Regex regLife = new Regex(@"093[0-9]{7}");
-            MatchCollection matLife = regLife.Matches(str);
-            int Life_Count = matLife.Count;
+            MatchCollection mat = regLife.Matches(str);
+            int Life_Count = mat.Count;
 
             Regex regMTC = new Regex(@"095[0-9]{7}");
-            MatchCollection matMTC = regMTC.Matches(str);
-            int MTC_Count = matMTC.Count;
+            mat = regMTC.Matches(str);
+            int MTC_Count = mat.Count;
 
             (int, int) tuple = (Life_Count, MTC_Count);
             return tuple;
